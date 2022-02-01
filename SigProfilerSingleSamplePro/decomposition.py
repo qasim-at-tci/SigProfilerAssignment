@@ -10,7 +10,7 @@ from SigProfilerSingleSamplePro import decompose_sub_routines as sub
 import numpy as np
 import pandas as pd
 #import SigProfilerExtractor as cosmic
-import os,sys
+import os,sys,pdb
 
 def Assign( samples,  output, signatures=None, signature_database=None, nnls_add_penalty=0.05, 
               nnls_remove_penalty=0.01, initial_remove_penalty=0.05, 
@@ -64,6 +64,7 @@ def Assign( samples,  output, signatures=None, signature_database=None, nnls_add
     #listOfSignatures = processAvg.columns
     #pdb.set_trace()
     #Get COSMIC SIGNATURES
+    #pdb.set_trace()
     if signatures == None:
         processAvg = sub.getProcessAvg(genomes, genome_build, "3.2")
     else:
